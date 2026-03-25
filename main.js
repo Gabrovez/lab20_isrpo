@@ -28,9 +28,6 @@ const button = document.getElementById("showName");
 const output = document.getElementById("output");
 
 button.addEventListener("click", () => {
-});
-
-button.addEventListener("click", () => {
     if (input.value.trim() !== "") {
     output.textContent = `Привет, ${input.value}!`;
     output.style.color = "green";
@@ -39,3 +36,12 @@ button.addEventListener("click", () => {
         output.style.color = "red";
     }
 });
+
+const clearButton = document.getElementById("clearButton");
+
+clearButton.addEventListener("click", () => {
+    input.value = "";
+    output.textContent = "";
+    output.style.color = "";
+    input.focus();
+}); 
